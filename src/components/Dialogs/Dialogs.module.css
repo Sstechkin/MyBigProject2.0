@@ -1,0 +1,27 @@
+
+
+.dialogItem {
+    background-color:rgb(0, 224, 212);
+    font-size: 15pt;
+    margin: 10px;
+}
+
+.dialogItem a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    padding-left: 40px;;
+}
+
+
+.Dialogs {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "d  m";
+}
+
+.addMessage {
+    text-align:center;
+    margin-top: 150px;
+}

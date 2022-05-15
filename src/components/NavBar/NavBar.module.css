@@ -1,0 +1,69 @@
+
+
+.navBar {
+    grid-area: n;
+    background-color:#048581;
+}
+
+.item {
+    color: white;
+    text-decoration: none;
+    font-size: 20pt;
+    padding: 10px;
+}
+
+.active {
+    color: yellow;
+    text-decoration: none;
+    font-size: 20pt;
+    padding: 10px;
+}
+
+
+.recomendationOfFriends {
+    display: grid;
+    grid-template-areas: 
+    "t t t"
+    "f s th";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    margin-top: 100px;
+    grid-gap: 10px;
+    
+}
+
+.recomendationOfFriends div {
+    color: white;
+    font-size: 15pt;
+    padding: 10px;
+    text-align: center;
+}
+
+.recAva {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: chocolate;
+    border-radius: 50%;
+
+}
+
+.title {
+    grid-area: t ;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.first {
+    grid-area: f ;
+}
+
+.second {
+    grid-area: s ;
+}
+
+.third {
+    grid-area: th ;
+}
+
+
