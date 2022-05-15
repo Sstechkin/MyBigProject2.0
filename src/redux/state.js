@@ -11,7 +11,8 @@ let state = {
         messageData: [
             { message: 'Hello', id: '1' },
             { message: 'How are you', id:'2' },
-            { message: 'Im fine', id:'3' }
+            { message: 'Im fine', id:'3' },
+            {message: 'its cool!', id: '4'}
         ],
         dialogsData: [
             { name: 'Dima', id: '1' },
