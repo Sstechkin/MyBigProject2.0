@@ -10,21 +10,20 @@ const MyPosts = (props) => {
     let textPost = React.createRef();
 
 
-
-
     let addPost = () => {
-        debugger;
-        let text = textPost.current.value;
-        props.newPosts(text);
-        textPost.current.value = '';
+        props.newPosts();
+        props.updateNewPostText('');
     }
 
-    debugger;
+    let onPostChange = () => {
+        let text = textPost.current.value;
+        props.updateNewPostText (text);
+    }
 
     return <div className={style.Profile}>
 
         <div>
-            <textarea ref={textPost} ></textarea>
+            <textarea onChange={onPostChange} ref={textPost}  value = {props.newPostText} />
 
         </div>
         <div>

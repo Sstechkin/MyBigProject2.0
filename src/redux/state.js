@@ -1,4 +1,8 @@
-import {renderEntireTree} from './../render';
+
+let renderEntireTree = () => {
+    alert('hello');
+}
+
 
 let state = {
     profilePage: {
@@ -6,6 +10,7 @@ let state = {
             { id: 1, post: 'It is my first post', likes: 10 },
             { id: 2, post: 'hello world', likes: 25 }
         ],
+        newPostText: 'fff'
     },
     messagesPage: {
         messageData: [
@@ -31,17 +36,29 @@ let state = {
     }
 };
 
+    window.state = state;
      
-export let newPosts = (newMessPosts) => {
+export let newPosts = () => {
     let newPost = {
         id: 3,
-        post: newMessPosts,
+        post: state.profilePage.newPostText,
         likes: 0
     };
     state.profilePage.postsData.push(newPost);
+    state.profilePage.newPostText = '';
     renderEntireTree(state);
 }
  
+
+export let updateNewPostText = (text) => {
+
+    state.profilePage.newPostText = text;
+    renderEntireTree(state);
+}
+
+  export  let subscriber = (observer) => {
+        renderEntireTree = observer;
+    }
 
 
 
