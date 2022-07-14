@@ -18,9 +18,8 @@ const App = (props) => {
                 <NavBar recFriends={props.state.sidebar} />
                 <div className='app-wripper-content'>
                     <Routes>
-                        <Route path='/Dialogs/*' element={<Dialogs messages={props.state.messagesPage}/>} />
-                        <Route path='/Profile/*' element={<Profile state={props.state.profilePage}
-                         updateNewPostText={props.updateNewPostText} newPosts={props.newPosts} />} />
+                        <Route path='/Dialogs/*' element={<Dialogs dispatch={props.dispatch} messages={props.state.messagesPage}/>} />
+                        <Route path='/Profile/*' element={<Profile state={props.state.profilePage} dispatch={props.dispatch} />} />
                         <Route path='/News/*' element={<News />} />
                         <Route path='/Music/*' element={<Music />} />
                         <Route path='/Setting/*' element={<Setting />} />
