@@ -4,9 +4,8 @@ import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import profileReducer from './profile-reducer';
 import dialogsReducer from './dialogs-reducer'
 
-
 let store = {
-
+    
     _state: {
         profilePage: {
             postsData: [
@@ -52,15 +51,15 @@ let store = {
     },
 
 
-    _callSubscriber() {
+    _callSubscribe() {
         alert('hello');
     },
 
 
 
 
-    subscriber(observer) {
-        this._callSubscriber = observer;
+    subscribe(observer) {
+        this._callSubscribe = observer;
     },
 
 
@@ -68,7 +67,7 @@ let store = {
 
         this._state.profilePage = profileReducer(this._state.profilePage, action);
         this._state.messagesPage = dialogsReducer(this._state.messagesPage, action);
-        this._callSubscriber(this._state);
+        this._callSubscribe(this._state);
     }
 
 }

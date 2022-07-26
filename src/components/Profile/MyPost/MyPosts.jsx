@@ -12,7 +12,6 @@ const MyPosts = (props) => {
 
     let textPost = React.createRef();
 
-
     let onPostChange = () => {
         let text = textPost.current.value;
         props.dispatch ( updateNewPostsTextCreateAction(text) );
@@ -22,10 +21,6 @@ const MyPosts = (props) => {
         props.dispatch( newPostsCreateAction() );
     };
     
-
-
-
-
     return <div className={style.Profile}>
 
         <div>

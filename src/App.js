@@ -11,6 +11,7 @@ import Music from './components/Music/Music';
 import Setting from  './components/Setting/Setting';
 
 const App = (props) => {
+    debugger;
     return (
         <BrowserRouter>
             <div className='app-wripper'>
@@ -19,7 +20,7 @@ const App = (props) => {
                 <div className='app-wripper-content'>
                     <Routes>
                         <Route path='/Dialogs/*' element={<Dialogs dispatch={props.dispatch} messages={props.state.messagesPage}/>} />
-                        <Route path='/Profile/*' element={<Profile state={props.state.profilePage} dispatch={props.dispatch} />} />
+                        <Route path='/Profile/*' element={<Profile state={props.state.profilePage} dispatch={props.dispatch} store={props.store} />} />
                         <Route path='/News/*' element={<News />} />
                         <Route path='/Music/*' element={<Music />} />
                         <Route path='/Setting/*' element={<Setting />} />

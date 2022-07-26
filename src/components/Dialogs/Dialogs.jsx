@@ -7,7 +7,7 @@ import {updateNewMessageBodyCreateAction, addedNewMessage} from '../../redux/dia
 
 
 const Dialogs = (props) => {
-
+    
       
    let messageElement = props.messages.messageData.map((el) => <Message message={el.message} />) 
    let dialogElement = props.messages.dialogsData.map((el) => <DialogItem name={el.name} id={el.id} />)
@@ -25,7 +25,6 @@ const Dialogs = (props) => {
    let addedMessage = () => {
     props.dispatch(addedNewMessage())
    }
-
 
     return (
         <div className={style.Dialogs}>
